@@ -4,7 +4,9 @@ RUN yum update -y
 RUN yum install -y \
     epel-release \
     yum-utils \
-    python2
+    python2 \
+    python3 \
+    zip
 
 #Install Nginx 1.18
 RUN yum module reset nginx -y && \
