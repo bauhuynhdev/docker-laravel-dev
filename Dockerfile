@@ -23,7 +23,8 @@ RUN yum module reset php -y && \
     yum module enable php:7.4 -y
 RUN yum install -y \
     php \
-    php-bcmath
+    php-bcmath \
+    php-pdo_mysql
 ADD php-fpm.conf /etc/php-fpm.d/www.conf
 RUN mkdir /run/php-fpm
 
